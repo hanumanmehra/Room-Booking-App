@@ -1,13 +1,8 @@
 public class LoyaltyProgramService {
-    public Boolean isThisContactPartOfLoyaltyProgram( Id contactId ){
-        if(contactId != null){
-          registerCheckInForContact(contactId); 
-          return true;
-        }
-        return false;
+     public static Boolean isThisContactPartOfLoyaltyProgram(Id contactId){
+        Return service().isThisContactPartOfLoyaltyProgram(contactId);
     }
-    public void registerCheckInForContact( id contactId ){
-        //Code for registercheckInForContact
+    public static ILoyaltyProgramService service(){
+        return new LoyaltyProgramServiceImpl();
     }
-
 }

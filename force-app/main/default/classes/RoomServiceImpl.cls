@@ -20,7 +20,7 @@ public with sharing class RoomServiceImpl implements IRoomService{
                 	uow.commitWork();
                     
                     //Check for loyality Service
-                    new LoyaltyProgramService().isThisContactPartOfLoyaltyProgram(room.Guest__c);
+                    LoyaltyProgramService.isThisContactPartOfLoyaltyProgram(room.Guest__c);
                 }    
             }
         }
